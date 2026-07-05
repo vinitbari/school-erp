@@ -1,0 +1,12 @@
+{
+  "name": "school-erp-root",
+  "version": "1.0.0",
+  "description": "EuroKids Pre-School Management System - Unified Build",
+  "scripts": {
+    "install:client": "npm install --prefix client",
+    "install:server": "npm install --prefix server",
+    "build:client": "npm run build --prefix client",
+    "build": "npm run install:client && npm run build:client && npm run install:server && npx --prefix server prisma generate",
+    "start": "npx tsx server/src/index.ts"
+  }
+}
